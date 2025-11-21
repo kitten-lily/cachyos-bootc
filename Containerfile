@@ -17,7 +17,7 @@ RUN pacman -Sy --noconfirm \
       ostree \
       shadow \
       sbctl && \
-sbctl init
+sbctl list-files
 #  pacman -S --clean --noconfirm && \
 #  rm -rf /var/cache/pacman/pkg/*
 
