@@ -30,4 +30,6 @@ RUN sed -i 's|^HOME=.*|HOME=/var/home|' "/etc/default/useradd" && \
 # RUN pacman -S whois --noconfirm
 # RUN usermod -p "$(echo "changeme" | mkpasswd -s)" root
 
+COPY --from=ghcr.io/ublue-os/brew:latest /system_files /
+
 RUN bootc container lint
